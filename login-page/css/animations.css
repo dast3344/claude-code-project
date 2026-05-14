@@ -1,0 +1,146 @@
+/* 背景流光渐变动画 */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 输入框聚焦发光动画 */
+@keyframes inputGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 240, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.6), 0 0 30px rgba(0, 240, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 240, 255, 0.3);
+    }
+}
+
+/* 按钮渐变流动效果 */
+@keyframes buttonGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 按钮发光效果 */
+@keyframes buttonGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 240, 255, 0.8), 0 0 60px rgba(123, 45, 255, 0.4);
+    }
+}
+
+/* Tab 下划线滑动动画 */
+@keyframes tabSlide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* 元素淡入上浮动画 */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 霓虹文字闪烁 */
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 240, 255, 0.5),
+                     0 0 20px rgba(0, 240, 255, 0.3),
+                     0 0 30px rgba(0, 240, 255, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 240, 255, 0.8),
+                     0 0 40px rgba(0, 240, 255, 0.5),
+                     0 0 60px rgba(0, 240, 255, 0.3);
+    }
+}
+
+/* 卡片玻璃态出现动画 */
+@keyframes glassAppear {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(20px);
+        transform: scale(1);
+    }
+}
+
+/* 轮播图切换动画 */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 微信图标悬浮效果 */
+@keyframes wechatHover {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 4px 15px rgba(7, 193, 102, 0.3);
+    }
+    50% {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(7, 193, 102, 0.5);
+    }
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 4px 15px rgba(7, 193, 102, 0.3);
+    }
+}
+
+/* 案例卡片滚动动画 */
+@keyframes scrollCards {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 加载动画 */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
