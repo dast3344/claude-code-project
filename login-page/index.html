@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 科技感登录页面</title>
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 背景容器 -->
+    <div class="background-container"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 主容器 -->
+    <div class="main-container">
+        <!-- 展示区（桌面版） -->
+        <section class="showcase-section">
+            <div class="showcase-logo">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                        <defs>
+                            <linearGradient id="showcaseLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#7b2dff;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="32" cy="32" r="28" fill="none" stroke="url(#showcaseLogoGradient)" stroke-width="2" opacity="0.5"/>
+                        <circle cx="32" cy="32" r="20" fill="none" stroke="url(#showcaseLogoGradient)" stroke-width="2"/>
+                        <polygon points="32,12 44,20 44,36 32,44 20,36 20,20" fill="none" stroke="url(#showcaseLogoGradient)" stroke-width="2.5"/>
+                        <circle cx="32" cy="28" r="4" fill="url(#showcaseLogoGradient)"/>
+                        <circle cx="32" cy="8" r="2" fill="#00f0ff" opacity="0.8"/>
+                        <circle cx="48" cy="20" r="2" fill="#00f0ff" opacity="0.8"/>
+                        <circle cx="48" cy="36" r="2" fill="#7b2dff" opacity="0.8"/>
+                        <circle cx="32" cy="48" r="2" fill="#7b2dff" opacity="0.8"/>
+                        <circle cx="16" cy="36" r="2" fill="#7b2dff" opacity="0.8"/>
+                        <circle cx="16" cy="20" r="2" fill="#00f0ff" opacity="0.8"/>
+                    </svg>
+                </div>
+            </div>
+            <h1 class="showcase-title">未来已至<br>即刻登录</h1>
+            <p class="showcase-subtitle">体验前所未有的科技之旅</p>
+
+            <!-- 轮播图 -->
+            <div class="carousel-container" id="carousel">
+                <div class="carousel-slide active">
+                    <div class="carousel-placeholder">🚀</div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="carousel-placeholder">⚡</div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="carousel-placeholder">🎯</div>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="carousel-indicator active"></span>
+                    <span class="carousel-indicator"></span>
+                    <span class="carousel-indicator"></span>
+                </div>
+            </div>
+
+            <!-- 客户评价 -->
+            <div class="testimonials">
+                <h3 class="testimonials-title">用户评价</h3>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"这是我见过最炫酷的登录界面，科技感十足！"</p>
+                    <p class="testimonial-author">— 科技爱好者</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"体验非常流畅，视觉效果令人印象深刻。"</p>
+                    <p class="testimonial-author">— 产品经理</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 登录卡片 -->
+        <div class="login-card">
+            <div class="logo-section">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                        <defs>
+                            <linearGradient id="cardLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#7b2dff;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="32" cy="32" r="28" fill="none" stroke="url(#cardLogoGradient)" stroke-width="2" opacity="0.5"/>
+                        <circle cx="32" cy="32" r="20" fill="none" stroke="url(#cardLogoGradient)" stroke-width="2"/>
+                        <polygon points="32,12 44,20 44,36 32,44 20,36 20,20" fill="none" stroke="url(#cardLogoGradient)" stroke-width="2.5"/>
+                        <circle cx="32" cy="28" r="4" fill="url(#cardLogoGradient)"/>
+                        <circle cx="32" cy="8" r="2" fill="#00f0ff" opacity="0.8"/>
+                        <circle cx="48" cy="20" r="2" fill="#00f0ff" opacity="0.8"/>
+                        <circle cx="48" cy="36" r="2" fill="#7b2dff" opacity="0.8"/>
+                        <circle cx="32" cy="48" r="2" fill="#7b2dff" opacity="0.8"/>
+                        <circle cx="16" cy="36" r="2" fill="#7b2dff" opacity="0.8"/>
+                        <circle cx="16" cy="20" r="2" fill="#00f0ff" opacity="0.8"/>
+                    </svg>
+                </div>
+                <h2 class="title">欢迎回来</h2>
+                <p class="subtitle">登录您的账户</p>
+            </div>
+
+            <!-- Tab 切换 -->
+            <div class="tab-container">
+                <div class="tab-item active" data-form="email-form">邮箱登录</div>
+                <div class="tab-item" data-form="sms-form">手机验证码</div>
+            </div>
+
+            <!-- 邮箱登录表单 -->
+            <form id="email-form" class="form-container active">
+                <div class="form-group">
+                    <label class="form-label" for="email">邮箱地址</label>
+                    <input
+                        type="email"
+                        id="email"
+                        class="form-input"
+                        placeholder="your@email.com"
+                        data-validate="email"
+                        required
+                    >
+                    <p class="error-message" id="email-error"></p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password">密码</label>
+                    <input
+                        type="password"
+                        id="password"
+                        class="form-input"
+                        placeholder="至少8位，包含字母和数字"
+                        data-validate="password"
+                        required
+                    >
+                    <p class="error-message" id="password-error"></p>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-group">
+                        <input type="checkbox" id="remember">
+                        <span class="checkbox-label">记住我</span>
+                    </label>
+                    <a href="#" class="forgot-password">忘记密码？</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary">登录</button>
+            </form>
+
+            <!-- 手机验证码登录表单 -->
+            <form id="sms-form" class="form-container">
+                <div class="form-group">
+                    <label class="form-label" for="phone">手机号</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        class="form-input"
+                        placeholder="请输入手机号"
+                        data-validate="phone"
+                        required
+                    >
+                    <p class="error-message" id="phone-error"></p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="code">验证码</label>
+                    <div class="verification-group">
+                        <input
+                            type="text"
+                            id="code"
+                            class="form-input"
+                            placeholder="6位数字"
+                            data-validate="code"
+                            required
+                        >
+                        <button type="button" id="send-code-btn" class="send-code-btn">发送验证码</button>
+                    </div>
+                    <p class="error-message" id="code-error"></p>
+                </div>
+
+                <button type="submit" class="btn btn-primary">登录</button>
+            </form>
+
+            <!-- 分割线 -->
+            <div class="divider">
+                <span>或使用其他方式</span>
+            </div>
+
+            <!-- 社交登录 -->
+            <div class="social-login">
+                <button class="social-btn wechat-login-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M8.5,13.5c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5S9.3,13.5,8.5,13.5z M13.5,13.5
+                            c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5S14.3,13.5,13.5,13.5z M19,7.5c0-3-2.7-5.5-6-5.5S7,4.5,7,7.5
+                            c0,1.5,0.7,2.9,1.8,3.9L8,13l2.1-0.6C10.8,12.8,11.4,13,12,13c0.3,0,0.7,0,1-0.1c0.5,2.6,2.9,4.6,5.8,4.6c0.6,0,1.2-0.1,1.7-0.3
+                            L22,18l-0.8-1.4C21.7,15.9,22,15,22,14C22,10.5,20.8,7.5,19,7.5z"/>
+                    </svg>
+                    微信登录
+                </button>
+            </div>
+
+            <!-- 注册链接 -->
+            <p class="register-link">
+                还没有账户？<a href="#">立即注册</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/particles.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/carousel.js"></script>
+</body>
+</html>
