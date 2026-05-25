@@ -1,0 +1,32 @@
+# Java/Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven repository (Windows path in Linux)
+backend/D:\\warehouse\\maven-repository/
+
+# Logs
+*.log
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Database files (if any)
+*.db
+*.sqlite
+
+# Frontend dependencies
+node_modules/
+dist/
+build/
+*.env.local
